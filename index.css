@@ -1,0 +1,119 @@
+
+body {
+	background-color: #cebfcc; /* light gray background color */
+}
+
+.logo h1 {
+	color: #310a41; /* bright purple logo color */
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px; /* adds padding to the logo */
+	font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	border-radius: 5px; /* adds a subtle rounded corner */
+	display: inline-block;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* spaces ul list across the page */
+	background-color: #1f021d; /* light gray background color */
+	padding: 10px; /* adds padding to the nav */
+	width: 100%; /* makes nav full width */
+    
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex; /* makes ul inline */
+	flex-grow: 1; /* makes ul take up remaining space */
+	justify-content: space-between; /* spaces li items across the page */
+	font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav li {
+	margin-right: 20px; /* adds space between list items */
+}
+
+nav a {
+	color: #c575d4; /* deep purple */
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+nav a:hover {
+	background-color: #442246; /* light purple */
+	color: #5C3C96; /* rich purple */
+	box-shadow: 0 0 0 1px #A77BB9; /* purple shadow */
+}
+.banner img {
+	width: 100%; /* makes image full width */
+	height: 70vh; /* makes image full height */
+	object-fit: cover; /* ensures image covers entire area */
+    margin-top: 150px;
+}
+
+.banner {
+	position: relative; /* allows absolute positioning of text and button */
+	text-align: center; /* centers text and button horizontally */
+}
+
+.banner h2 {
+	position: absolute; /* positions text absolutely */
+	top: 75%; /* centers text vertically */
+	left: 50%; /* centers text horizontally */
+	transform: translate(-50%, -50%); /* adjusts text position */
+	font-size: 48px; /* makes text big */
+	color: #fff; /* white text color */
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* adds text shadow */
+}
+
+.banner button {
+	position: absolute; /* positions button absolutely */
+	top: 90%; /* positions button below text */
+	left: 50%; /* centers button horizontally */
+	transform: translate(-50%, -50%); /* adjusts button position */
+	background-color: #8e24aa; /* bright purple button color */
+	color: #fff; /* white button text color */
+	border: none;
+	padding: 20px 40px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 24px; /* makes button text big */
+}
+
+.banner p {
+    color: #7A288A;
+    font-size: 20px;
+   
+    display: inline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.banner button:hover {
+	background-color: #7A288A; /* deep purple button hover color */
+}
+
+footer {
+	background-color: #f7f7f7; /* light gray background color */
+	padding: 20px; /* adds padding to the footer */
+	text-align: center; /* centers text horizontally */
+}
+
+footer p {
+	margin-bottom: 10px; /* adds space between paragraphs */
+}
+
+footer a {
+	color: #7A288A; /* deep purple link color */
+	text-decoration: none; /* removes underline from links */
+}
+
+footer a:hover {
+	color: #8e24aa; /* bright purple link hover color */
+}

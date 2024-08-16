@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Gallery</title>
+    <link rel="stylesheet" href="gallerystyles.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-header">
+            <h1>Gallery</h1>
+            <div class="gallery">
+            <h2>Add Pictures Here</h2>
+            <input type="file" id="image-upload" multiple>
+            <button id="add-button">Add Image</button>
+            <button id="back-button">Back Home</button>
+        </div>
+        <div id="gallery-container"></div>
+    </div>
+<footer>
+  <p class="footer">RYHAM'S NETWORK &copy;  2O24</p>
+</footer>
+    <script>
+
+// Get the gallery container and buttons
+const galleryContainer = document.getElementById('gallery-container');
+const backButton = document.getElementById('back-button');
+const addButton = document.getElementById('add-button');
+
+// Add event listener to back button
+backButton.addEventListener('click', () => {
+  // Navigate back home (e.g., to index.html)
+  window.location.href = 'index.html';
+});
+
+// Add event listener to add button
+addButton.addEventListener('click', () => {
+  const imageUpload = document.createElement('input');
+  imageUpload.type = 'file';
+  imageUpload.accept = 'image/*';
+  imageUpload.style.display = 'none';
+  document.body.appendChild(imageUpload);
+  imageUpload.click();
+
+  imageUpload.addEventListener('change', (e) => {
+    const files = e.target.files;
+    
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const reader = new FileReader();
+      
+      reader.addEventListener('load', () => {
+        const imgContainer = document.createElement('div');
+        
+        const img = document.createElement('img');
+        img.src = reader.result;
+        imgContainer.appendChild(img);
+        
+        const titleInput = document.createElement('input');
+        titleInput.type = 'text';
+        titleInput.placeholder = 'Add title';
+        titleInput.style.width = '200px';
+        imgContainer.appendChild(titleInput);
+        
+        const titleButton = document.createElement('button');
+        titleButton.textContent = 'Add Title';
+        imgContainer.appendChild(titleButton);
+        
+        titleButton.addEventListener('click', () => {
+          const titleText = titleInput.value;
+          const titleParagraph = document.createElement('p');
+          titleParagraph.textContent = titleText;
+          imgContainer.appendChild(titleParagraph);
+          titleInput.remove();
+          titleButton.remove();
+        });
+        
+        galleryContainer.appendChild(imgContainer);
+      });
+      
+      reader.readAsDataURL(file);
+    }
+    
+    imageUpload.remove();
+  });
+});
+;
+    </script>
+</body>
+</html>

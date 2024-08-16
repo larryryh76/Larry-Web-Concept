@@ -1,0 +1,86 @@
+body {
+  background-color: #220530;
+  font-family: Arial, sans-serif;
+}
+
+.gallery {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1A1D23;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.gallery h1 {
+  color: #8E24AA;
+  text-align: center;
+}
+
+.gallery h2 {
+  color: #64B5F6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#gallery-container div {
+  width: calc(33.33% - 10px);
+}
+
+img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2F343A;
+  color: #FFFFFF;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #8E24AA;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #651FFF;
+}
+
+p {
+  color: #64B5F6;
+  margin-bottom: 10px;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 1em;
+  color: #fff;
+  background-color: #7A288A; /* Dark Purple */
+  position: fixed;
+  bottom: 0;
+ right: 8px;
+ left: 8px;
+  width: 100%;
+  font-size: 14px;
+
+}
+
+/*begin*/
